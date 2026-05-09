@@ -6,7 +6,6 @@ plugins {
 
 group = 'com.example'
 version = '0.0.1-SNAPSHOT'
-description = 'sprintbot'
 
 java {
 	toolchain {
@@ -19,16 +18,6 @@ repositories {
 }
 
 dependencies {
-
-	implementation 'org.springframework.boot:spring-boot-starter-data-jpa'
-	implementation 'org.springframework.boot:spring-boot-starter-webmvc'
-	implementation 'org.springdoc:springdoc-openapi-starter-webmvc-ui:3.0.2'
-
-	developmentOnly 'org.springframework.boot:spring-boot-devtools'
-	runtimeOnly 'com.microsoft.sqlserver:mssql-jdbc'
-
-	testImplementation 'org.springframework.boot:spring-boot-starter-test'
-
 
 	implementation 'org.springframework.boot:spring-boot-starter-web'
 
@@ -44,9 +33,6 @@ dependencies {
 	developmentOnly 'org.springframework.boot:spring-boot-devtools'
 
 	testImplementation 'org.springframework.boot:spring-boot-starter-test'
-	runtimeOnly 'com.microsoft.sqlserver:mssql-jdbc'
-	runtimeOnly 'com.microsoft.sqlserver:mssql-jdbc'
-	runtimeOnly 'com.microsoft.sqlserver:mssql-jdbc'
 
 	testRuntimeOnly 'org.junit.platform:junit-platform-launcher'
 }
@@ -61,8 +47,4 @@ tasks.named('bootJar') {
 
 tasks.named('jar') {
 	enabled = false
-
 }
-
-
-
