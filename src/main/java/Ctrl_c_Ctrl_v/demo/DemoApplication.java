@@ -1,4 +1,4 @@
-package com.example.unidadadmin;
+package Ctrl_c_Ctrl_v.demo;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
