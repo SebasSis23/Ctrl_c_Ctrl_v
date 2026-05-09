@@ -1,4 +1,4 @@
-package Ctrl_c_Ctrl_v.demo;
+package com.example.unidadadmin;
 
 public class DemoApplication {
 
