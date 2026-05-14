@@ -1,4 +1,4 @@
-package Ctrl_c_Ctrl_v.demo;
+package Ctrl_c_Ctrl_v.demo.Model;
 
 import lombok.Data;
 import java.util.Date;
