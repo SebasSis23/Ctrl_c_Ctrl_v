@@ -1,6 +1,6 @@
 package Ctrl_c_Ctrl_v.demo.Controller;
 
-import Ctrl_c_Ctrl_v.demo.model.OrganismoFin;
+import Ctrl_c_Ctrl_v.demo.Model.OrganismoFin;
 import org.springframework.web.bind.annotation.*;
 
 import java.util.ArrayList;
