@@ -1,4 +1,4 @@
-package Ctrl_c_Ctrl_v.demo.controller;
+package Ctrl_c_Ctrl_v.demo.Controller;
 
 import Ctrl_c_Ctrl_v.demo.model.OrganismoFin;
 import org.springframework.web.bind.annotation.*;
