@@ -1,44 +1,38 @@
 package Ctrl_c_Ctrl_v.demo.Controller;
 
+import Ctrl_c_Ctrl_v.demo.Entity.OficinaEntity;
+import Ctrl_c_Ctrl_v.demo.service.OficinaService;
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
 
-import Ctrl_c_Ctrl_v.demo.Model.Oficina;
-
-import java.util.ArrayList;
 import java.util.List;
+import java.util.Optional;
 
 @RestController
-@RequestMapping("/oficinas")
+@RequestMapping("/api/oficina")
+@CrossOrigin(origins = "*")
 public class OficinaController {
 
-    private static List<Oficina> listaOficinas = new ArrayList<>();
+    @Autowired
+    private OficinaService oficinaService;
 
     @GetMapping
-    public List<Oficina> listar() {
-        return listaOficinas;
+    public List<OficinaEntity> getOficina() {
+        return oficinaService.getAllOficina();
     }
 
     @PostMapping
-    public Oficina guardar(@RequestBody Oficina nuevaOficina) {
-        listaOficinas.add(nuevaOficina);
-        return nuevaOficina;
+    public OficinaEntity createOficina(@RequestBody OficinaEntity oficinaEntity) {
+        return oficinaService.saveOficina(oficinaEntity);
     }
 
-    @PutMapping("/{index}")
-    public Oficina actualizar(@PathVariable int index, @RequestBody Oficina oficinaEditada) {
-        if (index >= 0 && index < listaOficinas.size()) {
-            listaOficinas.set(index, oficinaEditada);
-            return oficinaEditada;
-        }
-        return null;
+    @GetMapping("/{entidad}")
+    public Optional<OficinaEntity> getOficinaById(@PathVariable String entidad) {
+        return oficinaService.getOficinaById(entidad);
     }
 
-    @DeleteMapping("/{index}")
-    public String eliminar(@PathVariable int index) {
-        if (index >= 0 && index < listaOficinas.size()) {
-            listaOficinas.remove(index);
-            return "Oficina eliminada correctamente";
-        }
-        return "Error: Índice no encontrado";
-    }
+    @DeleteMapping("/{entidad}")
+    public void deleteOficina(@PathVariable String entidad) {
+        oficinaService.deleteOficina(entidad);
+}
 }
