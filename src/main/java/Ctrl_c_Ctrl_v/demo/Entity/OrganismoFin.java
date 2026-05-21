@@ -1,4 +1,4 @@
-package Ctrl_c_Ctrl_v.demo.Entity;
+package Ctrl_c_Ctrl_v.demo.entity;
 
 import jakarta.persistence.*;
 import lombok.Data;
