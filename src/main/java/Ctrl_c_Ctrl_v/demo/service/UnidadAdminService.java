@@ -20,4 +20,17 @@ public class UnidadAdminService {
     public UnidadAdminEntity guardar(UnidadAdminEntity unidad) {
         return repository.save(unidad);
     }
+    public UnidadAdminEntity actualizar(
+            String entidad,
+            UnidadAdminEntity unidad) {
+
+        unidad.setEntidad(entidad);
+
+        return repository.save(unidad);
+    }
+    public void eliminar(String entidad) {
+        repository.deleteById(entidad);
+    }
 }
+
+
