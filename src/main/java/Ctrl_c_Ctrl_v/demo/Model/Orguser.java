@@ -1,7 +1,7 @@
 package Ctrl_c_Ctrl_v.demo.Model;
 
+import java.time.LocalDate;
 import lombok.Data;
-import java.util.Date;
 
 @Data
 public class Orguser {
@@ -12,5 +12,5 @@ public class Orguser {
     private Boolean soloLectura;
     private Integer ckval;
     private String datos;
-    private Date fechaActualizacion;
+    private LocalDate fechaActualizacion;
 }
