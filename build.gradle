@@ -30,12 +30,8 @@ dependencies {
 	testAnnotationProcessor 'org.projectlombok:lombok'
 
 	implementation 'org.springframework.boot:spring-boot-starter-data-jpa'
-<<<<<<< HEAD
-	runtimeOnly 'org.postgresql:postgresql'
-=======
     runtimeOnly 'org.postgresql:postgresql'
 	
->>>>>>> 2f1f957cf172daa96e53d4ddc0c2e9a24614c08e
 }
 
 tasks.named('test') {

@@ -1,7 +1,9 @@
-package Ctrl_c_Ctrl_v.demo.Service;
+package Ctrl_c_Ctrl_v.demo.service;
 
-import Ctrl_c_Ctrl_v.demo.Entity.ObjGastoEntity;
-import Ctrl_c_Ctrl_v.demo.Repository.ObjGastoRepository;
+import Ctrl_c_Ctrl_v.demo.repository.ObjGastoRepository;
+import Ctrl_c_Ctrl_v.demo.entity.ObjGastoEntity;
+
+
 import org.springframework.stereotype.Service;
 
 import java.util.List;

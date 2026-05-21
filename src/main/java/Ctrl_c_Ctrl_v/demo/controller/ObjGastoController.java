@@ -1,7 +1,7 @@
 package Ctrl_c_Ctrl_v.demo.controller;
 
-import Ctrl_c_Ctrl_v.demo.Entity.ObjGastoEntity;
-import Ctrl_c_Ctrl_v.demo.Service.ObjGastoService;
+import Ctrl_c_Ctrl_v.demo.entity.ObjGastoEntity;
+import Ctrl_c_Ctrl_v.demo.service.ObjGastoService;
 import io.swagger.v3.oas.annotations.Operation;
 import io.swagger.v3.oas.annotations.tags.Tag;
 import org.springframework.web.bind.annotation.*;

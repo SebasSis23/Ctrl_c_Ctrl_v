@@ -1,8 +1,9 @@
-package Ctrl_c_Ctrl_v.demo.Repository;
+package Ctrl_c_Ctrl_v.demo.repository;
 
-import Ctrl_c_Ctrl_v.demo.Entity.ObjGastoEntity;
 import org.springframework.data.jpa.repository.JpaRepository;
 import org.springframework.stereotype.Repository;
+
+import Ctrl_c_Ctrl_v.demo.entity.ObjGastoEntity;
 
 @Repository
 public interface ObjGastoRepository extends JpaRepository<ObjGastoEntity, String> {
