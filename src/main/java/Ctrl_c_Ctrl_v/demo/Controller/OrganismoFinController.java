@@ -1,53 +1,51 @@
 package Ctrl_c_Ctrl_v.demo.Controller;
 
-import Ctrl_c_Ctrl_v.demo.Model.OrganismoFin;
+import Ctrl_c_Ctrl_v.demo.Entity.OrganismoFin;
+import Ctrl_c_Ctrl_v.demo.service.OrganismoFinService;
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
 
-import java.util.ArrayList;
 import java.util.List;
+import java.util.Optional;
 
 @RestController
-@RequestMapping("/organismo-fin")
+@RequestMapping("/api/organismo-fin")
+@CrossOrigin("*")
 public class OrganismoFinController {
 
-    // Base de datos en memoria
-    private List<OrganismoFin> lista = new ArrayList<>();
+    @Autowired
+    private OrganismoFinService service;
 
-    // GET - listar todos
+    // GET TODOS
     @GetMapping
     public List<OrganismoFin> listar() {
-        return lista;
+        return service.listar();
     }
 
-    // POST - guardar nuevo registro
+    // GET POR ID
+    @GetMapping("/{of}")
+    public Optional<OrganismoFin> buscarPorId(@PathVariable String of) {
+        return service.buscarPorId(of);
+    }
+
+    // POST
     @PostMapping
-    public OrganismoFin guardar(@RequestBody OrganismoFin o) {
-        lista.add(o);
-        return o;
+    public OrganismoFin guardar(@RequestBody OrganismoFin organismoFin) {
+        return service.guardar(organismoFin);
     }
 
-    // PUT - actualizar por índice
-    @PutMapping("/{index}")
-    public OrganismoFin actualizar(@PathVariable int index,
-                                   @RequestBody OrganismoFin o) {
+    // PUT
+    @PutMapping("/{of}")
+    public OrganismoFin actualizar(@PathVariable String of,
+                                   @RequestBody OrganismoFin organismoFin) {
 
-        if (index >= 0 && index < lista.size()) {
-            lista.set(index, o);
-            return o;
-        }
-
-        return null;
+        organismoFin.setOf(of);
+        return service.guardar(organismoFin);
     }
 
-    // DELETE - eliminar por índice
-    @DeleteMapping("/{index}")
-    public String eliminar(@PathVariable int index) {
-
-        if (index >= 0 && index < lista.size()) {
-            lista.remove(index);
-            return "Eliminado correctamente";
-        }
-
-        return "Índice no válido";
+    // DELETE
+    @DeleteMapping("/{of}")
+    public void eliminar(@PathVariable String of) {
+        service.eliminar(of);
     }
 }

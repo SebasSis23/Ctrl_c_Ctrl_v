@@ -5,8 +5,8 @@ import lombok.Data;
 @Data
 public class OrganismoFin {
 
-    private Integer gestion; // Numeric(4)
-    private String of;       // Character(3)
-    private String des;      // Character(100)
-    private String sigla;    // Character(15)
+    private Integer gestion;
+    private String of;
+    private String des;
+    private String sigla;
 }
