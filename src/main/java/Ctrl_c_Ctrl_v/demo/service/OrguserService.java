@@ -1,7 +1,7 @@
 package Ctrl_c_Ctrl_v.demo.service;
 
-import Ctrl_c_Ctrl_v.demo.Entity.OrguserEntity;
-import Ctrl_c_Ctrl_v.demo.Model.Orguser;
+import Ctrl_c_Ctrl_v.demo.entity.OrguserEntity;
+import Ctrl_c_Ctrl_v.demo.model.Orguser;
 import Ctrl_c_Ctrl_v.demo.repository.OrguserRepository;
 
 import org.springframework.beans.factory.annotation.Autowired;

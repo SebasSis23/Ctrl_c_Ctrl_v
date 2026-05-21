@@ -1,6 +1,6 @@
 package Ctrl_c_Ctrl_v.demo.repository;
 
-import Ctrl_c_Ctrl_v.demo.Entity.OrguserEntity;
+import Ctrl_c_Ctrl_v.demo.entity.OrguserEntity;
 import org.springframework.data.jpa.repository.JpaRepository;
 import org.springframework.stereotype.Repository;
 

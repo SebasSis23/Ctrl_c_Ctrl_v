@@ -1,6 +1,6 @@
-package Ctrl_c_Ctrl_v.demo.Controller;
+package Ctrl_c_Ctrl_v.demo.controller;
 
-import Ctrl_c_Ctrl_v.demo.Model.Orguser;
+import Ctrl_c_Ctrl_v.demo.model.Orguser;
 import Ctrl_c_Ctrl_v.demo.service.OrguserService;
 import java.util.List;
 import org.springframework.beans.factory.annotation.Autowired;
