@@ -1,19 +1,24 @@
 package Ctrl_c_Ctrl_v.demo.Entity;
 
-import jakarta.persistence.Entity;
-import jakarta.persistence.Id;
-import jakarta.persistence.Table;
+import jakarta.persistence.*;
 
 @Entity
 @Table(name = "bd_unidad_admin")
 public class UnidadAdminEntity {
 
     @Id
+    @Column(length = 4)
     private String entidad;
 
+    @Column(length = 5)
     private String unidad;
+
+    @Column(length = 120)
     private String descrip;
+
+    @Column(length = 20)
     private String ciudad;
+
     private Integer estadouni;
 
     public UnidadAdminEntity() {

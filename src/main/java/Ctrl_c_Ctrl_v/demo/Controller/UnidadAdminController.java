@@ -26,4 +26,17 @@ public class UnidadAdminController {
 
         return service.guardar(unidad);
     }
+    @PutMapping("/{entidad}")
+    public UnidadAdminEntity actualizar(
+            @PathVariable String entidad,
+            @RequestBody UnidadAdminEntity unidad) {
+
+        return service.actualizar(entidad, unidad);
+    }
+    @DeleteMapping("/{entidad}")
+    public void eliminar(
+            @PathVariable String entidad) {
+
+        service.eliminar(entidad);
+    }
 }
