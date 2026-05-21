@@ -1,8 +1,8 @@
-package Ctrl_c_Ctrl_v.demo.Controller;
-
-import Ctrl_c_Ctrl_v.demo.Model.Password;
+package Ctrl_c_Ctrl_v.demo.controller;
 
 import org.springframework.web.bind.annotation.*;
+
+import Ctrl_c_Ctrl_v.demo.model.Password;
 
 import java.util.ArrayList;
 import java.util.List;

@@ -1,6 +1,6 @@
 package Ctrl_c_Ctrl_v.demo.service;
 
-import Ctrl_c_Ctrl_v.demo.Entity.UnidadAdminEntity;
+import Ctrl_c_Ctrl_v.demo.entity.UnidadAdminEntity;
 import Ctrl_c_Ctrl_v.demo.repository.UnidadAdminRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
