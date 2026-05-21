@@ -1,6 +1,6 @@
 package Ctrl_c_Ctrl_v.demo.service;
 
-import Ctrl_c_Ctrl_v.demo.Entity.OrganismoFin;
+import Ctrl_c_Ctrl_v.demo.entity.OrganismoFin;
 import Ctrl_c_Ctrl_v.demo.repository.OrganismoFinRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
