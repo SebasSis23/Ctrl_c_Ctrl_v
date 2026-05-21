@@ -1,4 +1,4 @@
-package Ctrl_c_Ctrl_v.demo.Controller;
+package Ctrl_c_Ctrl_v.demo.controller;
 
 import Ctrl_c_Ctrl_v.demo.Entity.ObjGastoEntity;
 import Ctrl_c_Ctrl_v.demo.Service.ObjGastoService;

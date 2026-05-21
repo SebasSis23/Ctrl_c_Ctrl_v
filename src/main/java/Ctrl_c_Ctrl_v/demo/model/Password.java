@@ -1,4 +1,4 @@
-package Ctrl_c_Ctrl_v.demo.Model;
+package Ctrl_c_Ctrl_v.demo.model;
 
 public class Password {
 
