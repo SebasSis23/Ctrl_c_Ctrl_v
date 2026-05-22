@@ -21,15 +21,18 @@ public class UnidadAdminService {
         return repository.save(unidad);
     }
     public UnidadAdminEntity actualizar(
-            String entidad,
+            String id,
             UnidadAdminEntity unidad) {
 
-        unidad.setEntidad(entidad);
+        unidad.setEntidad(id);
 
         return repository.save(unidad);
     }
-    public void eliminar(String entidad) {
-        repository.deleteById(entidad);
+    public void eliminar(String id) {
+        repository.deleteById(id);
+    }
+    public UnidadAdminEntity buscarPorId(String id) {
+        return repository.findById(id).orElse(null);
     }
 }
 
