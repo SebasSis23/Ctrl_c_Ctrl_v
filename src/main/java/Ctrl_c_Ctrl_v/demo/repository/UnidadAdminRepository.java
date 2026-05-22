@@ -1,5 +1,5 @@
 package Ctrl_c_Ctrl_v.demo.repository;
-
+//corregido
 import org.springframework.data.jpa.repository.JpaRepository;
 import Ctrl_c_Ctrl_v.demo.entity.UnidadAdminEntity;
 

@@ -1,5 +1,5 @@
 package Ctrl_c_Ctrl_v.demo.service;
-
+//corregido
 import Ctrl_c_Ctrl_v.demo.entity.OrguserEntity;
 import Ctrl_c_Ctrl_v.demo.model.Orguser;
 import Ctrl_c_Ctrl_v.demo.repository.OrguserRepository;

@@ -1,5 +1,5 @@
 package Ctrl_c_Ctrl_v.demo.entity;
-
+//corregido
 import jakarta.persistence.*;
 
 @Entity
