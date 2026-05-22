@@ -1,5 +1,5 @@
 package Ctrl_c_Ctrl_v.demo.controller;
-
+//corregido
 import Ctrl_c_Ctrl_v.demo.entity.ObjGastoEntity;
 import Ctrl_c_Ctrl_v.demo.service.ObjGastoService;
 import io.swagger.v3.oas.annotations.Operation;
