@@ -1,5 +1,5 @@
 package Ctrl_c_Ctrl_v.demo.model;
-
+//corregido
 public class Password {
 
     private int id;

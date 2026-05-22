@@ -1,5 +1,5 @@
 package Ctrl_c_Ctrl_v.demo.controller;
-
+//corregido
 import Ctrl_c_Ctrl_v.demo.entity.UnidadAdminEntity;
 import Ctrl_c_Ctrl_v.demo.service.UnidadAdminService;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -8,7 +8,7 @@ import org.springframework.web.bind.annotation.*;
 import java.util.List;
 
 @RestController
-@RequestMapping("/unidadadmin")
+@RequestMapping("/api/unidadadmin")
 @CrossOrigin(origins = "*")
 public class UnidadAdminController {
 
@@ -25,5 +25,24 @@ public class UnidadAdminController {
             @RequestBody UnidadAdminEntity unidad) {
 
         return service.guardar(unidad);
+    }
+    @PutMapping("/{id}")
+    public UnidadAdminEntity actualizar(
+            @PathVariable String id,
+            @RequestBody UnidadAdminEntity unidad) {
+
+        return service.actualizar(id, unidad);
+    }
+    @DeleteMapping("/{id}")
+    public void eliminar(
+            @PathVariable String id) {
+
+        service.eliminar(id);
+    }
+    @GetMapping("/{id}")
+    public UnidadAdminEntity buscarPorId(
+            @PathVariable String id) {
+
+        return service.buscarPorId(id);
     }
 }
