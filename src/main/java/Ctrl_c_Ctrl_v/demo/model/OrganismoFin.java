@@ -1,5 +1,4 @@
 package Ctrl_c_Ctrl_v.demo.model;
-
 import lombok.Data;
 
 @Data
