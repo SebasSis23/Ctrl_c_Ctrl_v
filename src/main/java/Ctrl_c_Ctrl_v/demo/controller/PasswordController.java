@@ -1,124 +1,56 @@
 package Ctrl_c_Ctrl_v.demo.controller;
 
+import Ctrl_c_Ctrl_v.demo.entity.PasswordEntity;
+import Ctrl_c_Ctrl_v.demo.service.PasswordService;
+
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
 
-import Ctrl_c_Ctrl_v.demo.model.Password;
-
-import java.util.ArrayList;
 import java.util.List;
 
 @RestController
 @RequestMapping("/api/password")
+@CrossOrigin(origins = "*")
 public class PasswordController {
 
-    private List<Password> listaPassword = new ArrayList<>();
-
-
-    public PasswordController() {
-
-        listaPassword.add(new Password(
-                1,
-                "Administrador Principal",
-                "Cuenta principal",
-                "admin123",
-                "Admin",
-                "Sistemas",
-                "2026-05-14",
-                "ariel"
-        ));
-
-        listaPassword.add(new Password(
-                2,
-                "Usuario RRHH",
-                "Recursos Humanos",
-                "rrhh456",
-                "Usuario",
-                "RRHH",
-                "2026-05-13",
-                "maria"
-        ));
-
-        listaPassword.add(new Password(
-                3,
-                "Supervisor Ventas",
-                "Ventas generales",
-                "ventas789",
-                "Supervisor",
-                "Ventas",
-                "2026-05-12",
-                "carlos"
-        ));
-    }
+    @Autowired
+    private PasswordService passwordService;
 
 
     @GetMapping
-    public List<Password> obtenerPasswords() {
+    public List<PasswordEntity> obtenerPasswords() {
 
-        return listaPassword;
+        return passwordService.obtenerTodos();
     }
 
 
     @GetMapping("/{id}")
-    public Password obtenerPorId(@PathVariable int id) {
+    public PasswordEntity obtenerPorId(@PathVariable int id) {
 
-        for (Password p : listaPassword) {
-
-            if (p.getId() == id) {
-
-                return p;
-            }
-        }
-
-        return null;
+        return passwordService.obtenerPorId(id);
     }
 
 
     @PostMapping
-    public Password agregarPassword(@RequestBody Password password) {
+    public PasswordEntity agregarPassword(
+            @RequestBody PasswordEntity password) {
 
-        listaPassword.add(password);
-
-        return password;
+        return passwordService.guardar(password);
     }
 
 
     @PutMapping("/{id}")
-    public Password actualizarPassword(@PathVariable int id,
-    @RequestBody Password nuevo) {
+    public PasswordEntity actualizarPassword(
+            @PathVariable int id,
+            @RequestBody PasswordEntity nuevo) {
 
-        for (Password p : listaPassword) {
-
-            if (p.getId() == id) {
-
-                p.setCompleto(nuevo.getCompleto());
-                p.setDes(nuevo.getDes());
-                p.setPsw(nuevo.getPsw());
-                p.setTipo(nuevo.getTipo());
-                p.setGrupo(nuevo.getGrupo());
-                p.setFeult(nuevo.getFeult());
-                p.setUsuar(nuevo.getUsuar());
-
-                return p;
-            }
-        }
-
-        return null;
+        return passwordService.actualizar(id, nuevo);
     }
 
 
     @DeleteMapping("/{id}")
     public String eliminarPassword(@PathVariable int id) {
 
-        for (Password p : listaPassword) {
-
-            if (p.getId() == id) {
-
-                listaPassword.remove(p);
-
-                return "Registro eliminado";
-            }
-        }
-
-        return "No encontrado";
+        return passwordService.eliminar(id);
     }
 }
