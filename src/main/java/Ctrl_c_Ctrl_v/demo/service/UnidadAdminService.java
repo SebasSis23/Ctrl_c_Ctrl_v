@@ -1,5 +1,5 @@
 package Ctrl_c_Ctrl_v.demo.service;
-
+//corregido
 import Ctrl_c_Ctrl_v.demo.entity.UnidadAdminEntity;
 import Ctrl_c_Ctrl_v.demo.repository.UnidadAdminRepository;
 import org.springframework.beans.factory.annotation.Autowired;
