@@ -1,5 +1,5 @@
 package Ctrl_c_Ctrl_v.demo.controller;
-//corregido
+
 import Ctrl_c_Ctrl_v.demo.entity.OficinaEntity;
 import Ctrl_c_Ctrl_v.demo.service.OficinaService;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -26,13 +26,18 @@ public class OficinaController {
         return oficinaService.saveOficina(oficinaEntity);
     }
 
-    @GetMapping("/{entidad}")
-    public Optional<OficinaEntity> getOficinaById(@PathVariable String entidad) {
-        return oficinaService.getOficinaById(entidad);
+    @GetMapping("/{id}")
+    public Optional<OficinaEntity> getOficinaById(@PathVariable String id) {
+        return oficinaService.getOficinaById(id);
     }
 
-    @DeleteMapping("/{entidad}")
-    public void deleteOficina(@PathVariable String entidad) {
-        oficinaService.deleteOficina(entidad);
-}
+    @PutMapping("/{id}")
+    public OficinaEntity updateOficina(@PathVariable String id, @RequestBody OficinaEntity oficinaEntity) {
+        return oficinaService.updateOficina(id, oficinaEntity);
+    }
+
+    @DeleteMapping("/{id}")
+    public void deleteOficina(@PathVariable String id) {
+        oficinaService.deleteOficina(id);
+    }
 }

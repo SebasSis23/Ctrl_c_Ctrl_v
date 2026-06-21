@@ -1,5 +1,5 @@
 package Ctrl_c_Ctrl_v.demo.entity;
-//corregido
+
 import jakarta.persistence.Entity;
 import jakarta.persistence.Id;
 import jakarta.persistence.Table;
@@ -32,11 +32,9 @@ public class OficinaEntity {
 
     private Integer api_estado;
 
-    // --- CONSTRUCTOR VACÍO (Como el de tu docente) ---
     public OficinaEntity() {
     }
 
-    // --- GETTERS Y SETTERS ---
     public String getEntidad() { 
         return entidad; 
     }
